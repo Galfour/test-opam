@@ -1,0 +1,19 @@
+opam-version: "2.0"
+name: "test-opam"
+version: "1.0"
+synopsis: "Test package to test a new repository"
+maintainer: "Galfour <gabriel.alfour@gmail.com>"
+authors: "Galfour <gabriel.alfour@gmail.com>"
+license: "NO LICENSE"
+homepage: "https://github.com/Galfour/test-opam"
+bug-reports: "https://github.com/Galfour/test-opam/issues"
+depends: ["dune" "ocaml" "ocamlfind"]
+build: [
+  ["dune" "subst"]
+  ["dune" "build" "-p" name "-j" jobs]
+]
+dev-repo: "git+https://github.com.com/Galfour/test-opam.git"
+url {
+  src: "https://dummy_url.com/dummy-opam-package-master.tar.gz"
+  checksum: "md5=684e225f3e436aa55d0db5bbbac9b50d"
+}
